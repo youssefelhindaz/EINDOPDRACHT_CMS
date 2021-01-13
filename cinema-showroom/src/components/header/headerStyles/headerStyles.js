@@ -58,7 +58,7 @@ export const MenuList = styled.ul`
   }
 
   .nav-active {
-    color: ${COLORS.TERTIARY};
+    color: ${COLORS.NAV};
   }
 `
 
