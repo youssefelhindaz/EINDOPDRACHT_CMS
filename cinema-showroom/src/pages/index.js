@@ -7,26 +7,27 @@ import SEO from "../components/seo"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      query HomePageQuery {
-        page(id: "home", idType: URI) {
-          homeMeta {
-            homePageHeaderTitle
-            homePageHeaderDescription
-            homePageDescription
-            homePageHeaderPicture {
-              altText
-            }
-            homePageFeaturedMovies {
-              ... on Movie {
-                id
-                movie {
-                  titel
-                  director
-                  producer
-                  description
-                  rating
-                  moviePoster {
-                    altText
+      wpcontent {
+        pages {
+          edges {
+            node {
+              homeMeta {
+                homePageHeaderTitle
+                homePageHeaderDescription
+                homePageDescription
+                homePageHeaderPicture {
+                  altText
+                }
+                homePageFeaturedMovies {
+                  ... on WPGraphql_Movie {
+                    id
+                    movie {
+                      titel
+                      director
+                      moviePoster {
+                        altText
+                      }
+                    }
                   }
                 }
               }
