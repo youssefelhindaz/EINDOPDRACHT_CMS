@@ -63,7 +63,7 @@ const IndexPage = () => {
       }
     }
   `);
-console.log(homePageFeaturedMovies)
+
   return (
     <Layout>
       <SEO title="Home" />
