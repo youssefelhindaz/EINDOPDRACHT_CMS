@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -93,9 +93,7 @@ console.log(homePageFeaturedMovies)
                   alt={movie.moviePoster.altText}
                 />
                 <div className="artist-info">
-                  <p>
-                    {movie.titel}
-                  </p>
+                  <p>{movie.titel}</p>
                   <p>{movie.director}</p>
                 </div>
               </Movie>
