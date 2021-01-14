@@ -24,7 +24,7 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     const movies = result.data.wpcontent.movies.edges;
-    console.log(movies)
+    
     movies.forEach(movie => {
       const { id, slug } = movie.node;
       createPage({

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Wrapper, Image, Movie, BottomEdgeDown, BottomEdgeUp } from './pageStyles/pageStyles'
+import { Wrapper, Image, Movie, BottomEdgeDown, BottomEdgeUp } from '../pageStyles/pageStyles'
 import { COLORS } from "../constants"
 
 const IndexPage = () => {
@@ -32,7 +32,7 @@ const IndexPage = () => {
               sourceUrl
               imageFile {
                 childImageSharp {
-                  fluid(quality: 100) {
+                  fluid(quality: 50) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -49,7 +49,7 @@ const IndexPage = () => {
                     sourceUrl
                     imageFile {
                       childImageSharp {
-                        fluid(quality: 100) {
+                        fluid(quality: 50) {
                           ...GatsbyImageSharpFluid_withWebp
                         }
                       }

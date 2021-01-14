@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { COLORS } from "../constants"
-import { Wrapper, Image, BottomEdgeDown, BottomEdgeUp, Movie } from './pageStyles/pageStyles';
+import { Wrapper, Image, BottomEdgeDown, BottomEdgeUp, Movie } from '../pageStyles/pageStyles';
 
 const MoviesPage = (props) => {
   const {
@@ -28,7 +28,7 @@ const MoviesPage = (props) => {
               sourceUrl
               imageFile {
                 childImageSharp {
-                  fluid(quality: 100) {
+                  fluid(quality: 75) {
                     ...GatsbyImageSharpFluid_withWebp
                   }
                 }
@@ -48,7 +48,7 @@ const MoviesPage = (props) => {
                   sourceUrl
                   imageFile {
                     childImageSharp {
-                      fluid(quality: 100) {
+                      fluid(quality: 50) {
                         ...GatsbyImageSharpFluid_withWebp
                       }
                     }
