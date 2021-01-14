@@ -40,7 +40,7 @@ const IndexPage = () => {
             }
             homePageFeaturedMovies {
               ... on WPGraphql_Movie {
-                id
+                slug
                 movie {
                   titel
                   director
@@ -86,8 +86,8 @@ console.log(homePageFeaturedMovies)
         <div className="artists">
           <h2>Featured Movies</h2>
           <div className="artist-items">
-            { homePageFeaturedMovies.map(({ movie, id }) => (
-              <Movie key={id} to={`/${id}`} >
+            { homePageFeaturedMovies.map(({ movie, slug }) => (
+              <Movie key={slug} to={`/${slug}`} >
                 <Image 
                   fluid={movie.moviePoster.imageFile.childImageSharp.fluid}
                   alt={movie.moviePoster.altText}
