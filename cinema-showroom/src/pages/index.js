@@ -67,7 +67,7 @@ console.log(homePageFeaturedMovies)
   return (
     <Layout>
       <SEO title="Home" />
-      <Wrapper>
+      <Wrapper artistsColor={COLORS.BLACK} descriptionColor={COLORS.SECONDARY}>
         <div className="banner">
           <Image 
             fluid={homePageHeaderPicture.imageFile.childImageSharp.fluid} 
@@ -77,14 +77,14 @@ console.log(homePageFeaturedMovies)
             <p className="header-title">{homePageHeaderTitle}</p>
             <p className="header-description">{homePageHeaderDescription}</p>
           </div> 
-          <BottomEdgeDown color={COLORS.BLACK} />
+          <BottomEdgeDown color={COLORS.SECONDARY} />
         </div>
         <div className="description">
           <p>{homePageDescription}</p>
-          <BottomEdgeUp color={COLORS.PRIMARY} />
+          <BottomEdgeUp color={COLORS.BLACK} />
         </div>
         <div className="artists">
-          <h2>Featured Movies</h2>
+          <h2 style={{color: COLORS.PRIMARY}}>Featured Movies</h2>
           <div className="artist-items">
             { homePageFeaturedMovies.map(({ movie, slug }) => (
               <Movie key={slug} to={`/${slug}`} >

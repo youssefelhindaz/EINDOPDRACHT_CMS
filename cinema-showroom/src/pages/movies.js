@@ -66,7 +66,7 @@ const MoviesPage = (props) => {
   return (
     <Layout>
       <SEO title="Movies" />
-      <Wrapper artistColor={COLORS.BLACK} descriptionColor={COLORS.SECONDARY}>
+      <Wrapper artistsColor={COLORS.BLACK} descriptionColor={COLORS.SECONDARY}>
         <div className="banner">
           <Image 
             fluid={moviesPageHeaderPicture.imageFile.childImageSharp.fluid} 
@@ -75,12 +75,12 @@ const MoviesPage = (props) => {
           <BottomEdgeDown color={COLORS.SECONDARY} />
         </div>
         <div className="description">
-          <h2>Movie Mania!</h2>
+          <h2 style={{ color: COLORS.PRIMARY }}>Movie Mania!</h2>
           <p>{moviesPageDescription}</p>
           <BottomEdgeUp color={COLORS.BLACK} />
         </div>
         <div className="artists">
-          <h2>Our Movies</h2>
+          <h2 style={{ color: COLORS.PRIMARY }}>Our Movies</h2>
           <div className="artist-items">
             {movies.map(({ node: {movie, slug} }) => (
               <Movie to={`/${slug}`} key={slug}>
